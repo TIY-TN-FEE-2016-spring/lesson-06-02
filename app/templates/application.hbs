@@ -1,15 +1,17 @@
 <h2 id="title">Welcome to The Iron Yard</h2>
 
 <ul>
-  <li>
-    {{model.last}}, {{model.first}}
+  {{#each model as |person|}}
+    <li>
+      {{person.last}}, {{person.first}}
 
-    {{#if model.isSmart}}
-      <p>WOW SUCH SMART!!!</p>
-    {{else}}
-      <p>Go eat a donut...</p>
-    {{/if}}
-  </li>
+      {{#if person.isSmart}}
+        <p>WOW SUCH SMART!!!</p>
+      {{else}}
+        <p>Go eat a donut...</p>
+      {{/if}}
+    </li>
+  {{/each}}
 </ul>
 
 {{outlet}}
