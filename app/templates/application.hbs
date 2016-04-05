@@ -1,5 +1,15 @@
 <h2 id="title">Welcome to The Iron Yard</h2>
 
-<p>"{{model}}" is {{model.length}} characters long</p>
+<ul>
+  <li>
+    {{model.last}}, {{model.first}}
+
+    {{#if model.isSmart}}
+      <p>WOW SUCH SMART!!!</p>
+    {{else}}
+      <p>Go eat a donut...</p>
+    {{/if}}
+  </li>
+</ul>
 
 {{outlet}}

@@ -2,6 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return `A plain string`;
+    return {
+      first: `Homer`,
+      last: `Simpson`,
+      isSmart: false,
+    };
   },
 });
