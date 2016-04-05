@@ -1,0 +1,9 @@
+<p>
+  {{#if showKelvin}}
+    {{temperature}} K
+  {{else}}
+    {{k-to-f temperature}}ºF
+  {{/if}}
+</p>
+<button {{action changeShowKelvin true}}>K</button>
+<button {{action changeShowKelvin false}}>ºF</button>

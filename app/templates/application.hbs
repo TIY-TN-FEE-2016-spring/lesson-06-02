@@ -1,17 +1,17 @@
 <h2 id="title">Welcome to The Iron Yard</h2>
 
-<ul>
-  {{#each model as |person|}}
-    <li>
-      {{person.last}}, {{person.first}}
+{{log model}}
 
-      {{#if person.isSmart}}
-        <p>WOW SUCH SMART!!!</p>
-      {{else}}
-        <p>Go eat a donut...</p>
-      {{/if}}
-    </li>
-  {{/each}}
-</ul>
+<p>
+  {{model.name}}
+</p>
 
+<h3>{{show-temperature temperature=model.main.temp}}</h3>
+{{show-temperature temperature=model.main.temp}}
+{{show-temperature temperature=model.main.temp}}
+{{show-temperature temperature=model.main.temp}}
+
+<p>
+  {{model.weather.firstObject.description}}
+</p>
 {{outlet}}
